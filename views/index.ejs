@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joke Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
     <h1>JOKEs Generator</h1>
-    <% if (locals.joke) { %>
-        <h2><%= joke %></h2>
-    <% } else if (locals.setup){ %>
-        <h2><%= setup %></h2>
-        <h2><%= delivery %></h2>
-    <% } else { %>
-        <p>Something goes wrong</p>
-    <% } %>
-    <a href="/"><button type="button">Refresh</button></a>
+    <div class="card">
+        <div>
+        <% if (locals.joke) { %>
+            <p><%= joke %></p>
+        <% } else if (locals.setup){ %>
+            <p><%= setup %></p>
+            <p><%= delivery %></p>
+        <% } else { %>
+            <p>Something goes wrong</p>
+        <% } %>
+        
+    </div>
+    </div>
+    <a class ="refresh" href="/">Refresh</a>
+    
 </body>
 </html>
