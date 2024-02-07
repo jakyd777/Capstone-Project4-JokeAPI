@@ -6,6 +6,15 @@
     <title>Joke Generator</title>
 </head>
 <body>
-    <h1>Hello world.</h1>
+    <h1>JOKEs Generator</h1>
+    <% if (locals.joke) { %>
+        <h2><%= joke %></h2>
+    <% } else if (locals.setup){ %>
+        <h2><%= setup %></h2>
+        <h2><%= delivery %></h2>
+    <% } else { %>
+        <p>Something goes wrong</p>
+    <% } %>
+    <a href="/"><button type="button">Refresh</button></a>
 </body>
 </html>
